@@ -1,1 +1,19 @@
+// Variables
+//font vars
+$headline-font: 'Fjalla One',
+sans-serif;
+$text-font: 'Noto Sans',
+sans-serif;
+
 @import 'reset';
+@import 'component';
+@import 'layout';
+
+// Media Query Mixins
+@mixin mediaSM {
+    @media screen and (max-width: 568px) {
+        @content
+    }
+}
+
+@import 'media';

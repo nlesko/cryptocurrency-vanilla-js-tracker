@@ -1,14 +1,9 @@
-html,
-body,
-ul,
-li,
-p {
+* {
   margin: 0;
   padding: 0; }
 
 body {
-  font-family: arial;
-  background: #222; }
+  font-family: "Noto Sans", sans-serif; }
 
 h1,
 h2,
@@ -18,12 +13,50 @@ h6,
 p {
   margin-top: 0; }
 
+a {
+  text-decoration: none;
+  color: #222; }
+
 li {
   list-style: none; }
 
-main {
+header nav {
+  height: 60px;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box; }
+  background: #fff;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  -webkit-box-shadow: 0px 5px 8px 0px rgba(48, 48, 48, 0.6);
+  box-shadow: 0px 5px 6px 0px rgba(48, 48, 48, 0.5); }
+  header nav .logo-branding {
+    display: inline-block;
+    font-size: 26px;
+    font-family: "Fjalla One", sans-serif;
+    padding: 15px 0; }
+    header nav .logo-branding span {
+      color: #FF2400;
+      font-weight: 700; }
+  header nav li {
+    display: inline; }
+  header nav a {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px; }
+    header nav a:hover {
+      background: black;
+      color: #fff; }
+
+body {
+  background: #DCDCDC; }
+
+@media screen and (max-width: 568px) {
+  .navbar-nav {
+    display: none; } }
+
+@media screen and (min-width: 568px) {
+  .open-slide {
+    display: none; } }

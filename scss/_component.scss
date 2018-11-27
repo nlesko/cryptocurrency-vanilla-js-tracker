@@ -1,0 +1,44 @@
+header {
+
+
+    nav {
+        height: 60px;
+        width: 100%;
+        background: #fff;
+        position: fixed;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        -webkit-box-shadow: 0px 5px 8px 0px rgba(48, 48, 48, 0.6);
+        box-shadow: 0px 5px 6px 0px rgba(48, 48, 48, 0.5);
+
+        .logo-branding {
+            display: inline-block;
+            font-size: 26px;
+            font-family: $headline-font;
+            padding: 15px 0;
+
+            span {
+                color: #FF2400;
+                font-weight: 700;
+            }
+        }
+
+        li {
+            display: inline;
+        }
+
+        a {
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 16px;
+
+            &:hover {
+                background: black;
+                color: #fff;
+            }
+        }
+    }
+}

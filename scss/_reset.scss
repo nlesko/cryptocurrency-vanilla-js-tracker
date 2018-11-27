@@ -1,15 +1,10 @@
-html,
-body,
-ul,
-li,
-p {
+* {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: arial;
-    background: #222;
+    font-family: $text-font;
 }
 
 h1,
@@ -17,19 +12,15 @@ h2,
 h3,
 h5,
 h6,
-,
 p {
     margin-top: 0;
 }
 
-li {
-    list-style: none;
+a {
+    text-decoration: none;
+    color: #222;
 }
 
-main {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+li {
+    list-style: none;
 }
