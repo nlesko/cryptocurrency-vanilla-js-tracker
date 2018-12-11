@@ -97,10 +97,9 @@ header nav {
     .card .card-header .card-image {
       height: 35px;
       width: 35px; }
-    .card .card-header .currency-change {
+    .card .card-header .coin-change {
       justify-self: end;
-      font-size: 1.8em;
-      color: red; }
+      font-size: 1.8em; }
   .card .card-content {
     margin-top: 2%;
     display: grid;
