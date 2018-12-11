@@ -1,0 +1,64 @@
+// Variables
+//font vars
+$headline-font: 'Fjalla One',
+sans-serif;
+$text-font: 'Noto Sans',
+sans-serif;
+$bg-color: #F0F0F0;
+
+// RESET
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $text-font;
+    background-color: $bg-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $headline-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+li {
+    list-style: none;
+}
+
+
+// Media Query Mixins
+@mixin mediaSM {
+    @media screen and (max-width: 568px) {
+        @content
+    }
+}

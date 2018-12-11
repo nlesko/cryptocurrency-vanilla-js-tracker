@@ -1,3 +1,12 @@
-body {
-    background: #DCDCDC;
+#main {
+    margin-top: 70px;
+}
+
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
 }

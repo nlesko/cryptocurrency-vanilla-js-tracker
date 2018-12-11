@@ -1,11 +1,10 @@
 header {
-
-
     nav {
-        height: 60px;
         width: 100%;
         background: #fff;
+        overflow: hidden;
         position: fixed;
+        top: 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
@@ -39,6 +38,51 @@ header {
                 background: black;
                 color: #fff;
             }
+        }
+    }
+}
+
+
+.card {
+    background-color: #fff;
+    color: black;
+    padding: 15px;
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(48, 48, 48, 0.6);
+    box-shadow: 0px 5px 6px 0px rgba(48, 48, 48, 0.5);
+
+    .card-header {
+        display: grid;
+        grid-template-columns: 40px 1fr 1fr;
+        grid-gap: 5px;
+        align-items: center;
+
+        .card-title {
+            font-size: 2em;
+            font-family: $headline-font;
+        }
+
+        .card-image {
+            height: 35px;
+            width: 35px;
+        }
+
+        .currency-change {
+            justify-self: end;
+            font-size: 1.8em;
+            color: red;
+        }
+    }
+
+    .card-content {
+        margin-top: 2%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: end;
+
+        .currency-value {
+            font-size: 2em;
+            color: green;
+            justify-self: start;
         }
     }
 }

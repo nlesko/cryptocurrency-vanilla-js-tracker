@@ -2,12 +2,30 @@
   margin: 0;
   padding: 0; }
 
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
 body {
-  font-family: "Noto Sans", sans-serif; }
+  font-family: "Noto Sans", sans-serif;
+  background-color: #F0F0F0; }
 
 h1,
 h2,
 h3,
+h4,
+h5,
+h6 {
+  font-family: "Fjalla One", sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
 h5,
 h6,
 p {
@@ -20,11 +38,23 @@ a {
 li {
   list-style: none; }
 
+#main {
+  margin-top: 70px; }
+
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px; }
+
 header nav {
-  height: 60px;
   width: 100%;
   background: #fff;
+  overflow: hidden;
   position: fixed;
+  top: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
@@ -50,13 +80,33 @@ header nav {
       background: black;
       color: #fff; }
 
-body {
-  background: #DCDCDC; }
-
-@media screen and (max-width: 568px) {
-  .navbar-nav {
-    display: none; } }
-
-@media screen and (min-width: 568px) {
-  .open-slide {
-    display: none; } }
+.card {
+  background-color: #fff;
+  color: black;
+  padding: 15px;
+  -webkit-box-shadow: 0px 5px 8px 0px rgba(48, 48, 48, 0.6);
+  box-shadow: 0px 5px 6px 0px rgba(48, 48, 48, 0.5); }
+  .card .card-header {
+    display: grid;
+    grid-template-columns: 40px 1fr 1fr;
+    grid-gap: 5px;
+    align-items: center; }
+    .card .card-header .card-title {
+      font-size: 2em;
+      font-family: "Fjalla One", sans-serif; }
+    .card .card-header .card-image {
+      height: 35px;
+      width: 35px; }
+    .card .card-header .currency-change {
+      justify-self: end;
+      font-size: 1.8em;
+      color: red; }
+  .card .card-content {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end; }
+    .card .card-content .currency-value {
+      font-size: 2em;
+      color: green;
+      justify-self: start; }
