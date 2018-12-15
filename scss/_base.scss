@@ -4,7 +4,19 @@ $headline-font: 'Fjalla One',
 sans-serif;
 $text-font: 'Noto Sans',
 sans-serif;
-$bg-color: #F0F0F0;
+
+// colour vars
+$main-colour: #202020;
+$secondary-colour: #FF2400;
+$bg-colour: #F0F0F0;
+$white-colour: #fff;
+$currency-colour: #85bb65;
+
+// mixins
+@mixin boxShadow {
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(48, 48, 48, 0.6);
+    box-shadow: 0px 5px 6px 0px rgba(48, 48, 48, 0.5);
+}
 
 // RESET
 * {
@@ -24,7 +36,8 @@ html {
 
 body {
     font-family: $text-font;
-    background-color: $bg-color;
+    background-color: $bg-colour;
+    color: $main-colour;
 }
 
 h1,
@@ -57,8 +70,27 @@ li {
 
 
 // Media Query Mixins
-@mixin mediaSM {
-    @media screen and (max-width: 568px) {
+@mixin mediaXS {
+    @media screen and (max-width: 560px) {
+        @content
+    }
+}
+
+@mixin mediaS {
+    @media screen and (max-width: 740px) {
+        @content
+    }
+}
+
+
+@mixin mediaM {
+    @media screen and (max-width: 1200px) {
+        @content
+    }
+}
+
+@mixin mediaL {
+    @media screen and (max-width: 1800px) {
         @content
     }
 }

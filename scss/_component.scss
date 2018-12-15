@@ -1,15 +1,14 @@
 header {
     nav {
         width: 100%;
-        background: #fff;
+        background: $white-colour;
         overflow: hidden;
         position: fixed;
         top: 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
-        -webkit-box-shadow: 0px 5px 8px 0px rgba(48, 48, 48, 0.6);
-        box-shadow: 0px 5px 6px 0px rgba(48, 48, 48, 0.5);
+        @include boxShadow;
 
         .logo-branding {
             display: inline-block;
@@ -18,7 +17,7 @@ header {
             padding: 15px 0;
 
             span {
-                color: #FF2400;
+                color: $secondary-colour;
                 font-weight: 700;
             }
         }
@@ -35,20 +34,18 @@ header {
             font-size: 16px;
 
             &:hover {
-                background: black;
-                color: #fff;
+                background: $secondary-colour;
+                color: $white-colour;
+                ;
             }
         }
     }
 }
 
-
 .card {
-    background-color: #fff;
-    color: black;
+    background-color: $white-colour;
     padding: 15px;
-    -webkit-box-shadow: 0px 5px 8px 0px rgba(48, 48, 48, 0.6);
-    box-shadow: 0px 5px 6px 0px rgba(48, 48, 48, 0.5);
+    @include boxShadow;
 
     .card-header {
         display: grid;
@@ -80,7 +77,7 @@ header {
 
         .currency-value {
             font-size: 2em;
-            color: green;
+            color: $currency-colour;
             justify-self: start;
         }
     }
