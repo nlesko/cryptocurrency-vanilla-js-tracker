@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/nlesko/cryptocurrency-vanilla-js-webapp#readme",
   "dependencies": {
-    "node-sass": "^4.10.0"
+    "node-sass": "^7.0.3"
   }
 }

@@ -1,4 +1,4 @@
-const url = 'https://api.coinranking.com/v1/public/coins';
+const url = 'https://api.coinranking.com/v2/coins';
 const cardContainer = document.getElementById('card-container');
 const currencyFormatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -7,16 +7,21 @@ const currencyFormatter = new Intl.NumberFormat('en-US', {
 })
 
 
-axios.get(url)
+axios.get(url,
+    {
+        headers: {
+            'x-acces-token': 'coinranking677e61a2da8beea8d73a24fa0cf964aa1860263aa6ae2ad6'
+        }
+    })
     .then((res) => {
         let coins = res.data.data.coins;
         listCoins(coins);
     })
-    .catch((error) => {
-        console.log(error);
-    })
     .then(() => {
         changeGrowth();
+    })
+    .catch((error) => {
+        console.log(error);
     })
 
 function listCoins(coins) {
@@ -39,6 +44,7 @@ function listCoins(coins) {
 function changeGrowth() {
     const coinChange = document.getElementsByClassName('coin-change')
     for (let i = 0; i <= coinChange.length; i++) {
+        if(!coinChange[i]) break;
         let strIndex = coinChange[i].textContent.slice(0, 1);
 
         if (strIndex === '-') {
