@@ -10,10 +10,10 @@ To build this small web application I used:
 * Sass as CSS preprocessor
 * CSS3 Grid for positioning
  
-Building this small web application was a nice opportunity to get more comfortable using API library Axios, Sass as CSS preprocessor and overall JavaScript DOM manipulation.
+Building this small web application was a nice opportunity to get more comfortable using API library Axios, Sass as CSS preprocessor, and overall JavaScript DOM manipulation.
 
 
-I started building the application by creating Navbar which has title and 2 navigation links, home and about, home redirects you back to index.html file while about redirects you to GitHub page. After that created placeholder card-like item, which would later be filled with info that came from API call.
+I started building the application by creating a Navbar that has a title and 2 navigation links, home and about, home redirects you back to the index.html file while about redirects you to the GitHub page. After that created a placeholder card-like item, which would later be filled with info that came from the API call.
 
 
 After making basic connection between styles and JavaScript file. I made API .get request to list 50 Cryptocurrencies. Since Cryptocurrencies came in an Array I decided to use the forEach method and append previously made card-like item, this time filled with Cryptocurrency info, to an empty container.  
